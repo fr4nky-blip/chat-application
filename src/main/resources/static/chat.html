@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Chat</title>
+    <link rel="stylesheet" href="css/chat.css">
+</head>
+<body>
+
+<div class="chat-container">
+
+    <div class="user-list">
+        <h3>Chats</h3>
+        <ul id="users"></ul>
+    </div>
+
+    <div class="chat-area">
+        <div class="chat-header">
+            <span id="chatWith">Select a user</span>
+        </div>
+
+        <div class="messages" id="messages"></div>
+
+        <div class="chat-input">
+            <input type="text" id="messageInput" placeholder="Type a message..." />
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+</div>
+
+<!-- REQUIRED LIBRARIES -->
+<script src="https://cdn.jsdelivr.net/npm/sockjs-client@1/dist/sockjs.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/stompjs@2.3.3/lib/stomp.min.js"></script>
+
+<!-- YOUR SCRIPT (ALWAYS LAST) -->
+<script src="js/chat.js"></script>
+
+</body>
+</html>

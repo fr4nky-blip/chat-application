@@ -18,4 +18,4 @@ OnyxApp is a responsive chat application built with HTML, CSS, and JavaScript.
 - Fully functional UI accessible in browser
 
 ## Live Site
-🔗 [https://your-username.vercel.app](https://chat-application-jet-zeta.vercel.app)
+🔗 [https://chat-application-jet-zeta.vercel.app](https://chat-application-jet-zeta.vercel.app)

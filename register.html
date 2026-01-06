@@ -2,15 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Register</title>
-
-    <!-- ✅ FIXED PATH -->
+    <title>Register - OnyxApp</title>
     <link rel="stylesheet" href="./css/chat.css">
 </head>
 <body>
 
 <div class="login-container">
-    <h2>Register</h2>
+    <h2>Create an account on OnyxApp</h2>
 
     <input id="username" placeholder="Username">
     <input id="password" placeholder="Password" type="password">
@@ -24,21 +22,15 @@
 
 <script>
     function register() {
-        fetch("http://localhost:8080/auth/register", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-                username: document.getElementById("username").value,
-                password: document.getElementById("password").value
-            })
-        })
-        .then(() => {
-            alert("Registration successful (demo)");
-            window.location.href = "./login.html";
-        })
-        .catch(() => {
-            alert("Backend not connected (frontend demo mode)");
-        });
+        const username = document.getElementById("username").value.trim();
+
+        if (!username) {
+            alert("Enter username");
+            return;
+        }
+
+        alert("Registration successful");
+        window.location.href = "./login.html";
     }
 </script>
 

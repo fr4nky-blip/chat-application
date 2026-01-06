@@ -1,4 +1,4 @@
-// ===== CHAT APPLICATION =====
+// ===== ONYXAPP CHAT =====
 
 const currentUser = localStorage.getItem("user");
 
@@ -6,7 +6,7 @@ if (!currentUser) {
     window.location.href = "./login.html";
 }
 
-// Mock users for chat
+// Mock users
 const users = ["Alice", "Bob", "Charlie", "David"].filter(u => u !== currentUser);
 
 const usersList = document.getElementById("users");
@@ -15,7 +15,7 @@ const chatWithSpan = document.getElementById("chatWith");
 
 let selectedUser = null;
 
-// Render user list
+// Render users
 users.forEach(user => {
     const li = document.createElement("li");
     li.textContent = user;
@@ -38,7 +38,7 @@ function sendMessage() {
 
     addMessage(currentUser, text, "sent");
 
-    // Simulate a reply
+    // Simulate reply
     setTimeout(() => {
         addMessage(selectedUser, "Message received", "received");
     }, 800);
@@ -46,7 +46,7 @@ function sendMessage() {
     input.value = "";
 }
 
-// Add message to chat area
+// Add message to chat
 function addMessage(sender, text, type) {
     const msg = document.createElement("div");
     msg.className = "message " + type;

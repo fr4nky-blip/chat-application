@@ -3,17 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-
-    <!-- ✅ FIXED PATH -->
+    <title>Login - OnyxApp</title>
     <link rel="stylesheet" href="./css/chat.css">
-
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <div class="login-container">
-    <h2>Login</h2>
+    <h2>Login to OnyxApp</h2>
     <input id="username" placeholder="Username">
     <input id="password" placeholder="Password" type="password">
     <button onclick="login()">Login</button>
@@ -23,30 +19,16 @@
 </div>
 
 <script>
-    // ⚠️ Backend will NOT work on GitHub Pages (expected)
-    const BASE_URL = "http://localhost:8080";
-
     function login() {
-        const username = document.getElementById("username").value;
-        const password = document.getElementById("password").value;
+        const username = document.getElementById("username").value.trim();
 
-        fetch(`${BASE_URL}/auth/login`, {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ username, password })
-        })
-        .then(res => res.json())
-        .then(data => {
-            if (data.username) {
-                localStorage.setItem("user", data.username);
-                window.location.href = "./chat.html";
-            } else {
-                alert("Invalid credentials");
-            }
-        })
-        .catch(() => {
-            alert("Backend not connected (frontend demo mode)");
-        });
+        if (!username) {
+            alert("Enter username");
+            return;
+        }
+
+        localStorage.setItem("user", username);
+        window.location.href = "./chat.html";
     }
 </script>
 

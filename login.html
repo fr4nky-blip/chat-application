@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <!-- Link to your chat.css -->
-    <link rel="stylesheet" href="css/chat.css">
+
+    <!-- ✅ FIXED PATH -->
+    <link rel="stylesheet" href="./css/chat.css">
+
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -16,15 +18,13 @@
     <input id="password" placeholder="Password" type="password">
     <button onclick="login()">Login</button>
     <p>
-        New user? <a href="register.html">Register</a>
+        New user? <a href="./register.html">Register</a>
     </p>
 </div>
 
 <script>
-    // ===== Set your backend URL here =====
-    // Use localhost for local dev, or your live backend URL after deployment
+    // ⚠️ Backend will NOT work on GitHub Pages (expected)
     const BASE_URL = "http://localhost:8080";
-    // Example for deployment: const BASE_URL = "https://mychatapp-backend.onrender.com";
 
     function login() {
         const username = document.getElementById("username").value;
@@ -39,14 +39,13 @@
         .then(data => {
             if (data.username) {
                 localStorage.setItem("user", data.username);
-                window.location.href = "chat.html";
+                window.location.href = "./chat.html";
             } else {
                 alert("Invalid credentials");
             }
         })
-        .catch(err => {
-            console.error(err);
-            alert("Error connecting to server");
+        .catch(() => {
+            alert("Backend not connected (frontend demo mode)");
         });
     }
 </script>

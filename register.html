@@ -1,20 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>Register</title>
+
+    <!-- ✅ FIXED PATH -->
+    <link rel="stylesheet" href="./css/chat.css">
 </head>
 <body>
 
-<h2>Register</h2>
+<div class="login-container">
+    <h2>Register</h2>
 
-<input id="username" placeholder="Username">
-<input id="password" placeholder="Password" type="password">
-<button onclick="register()">Register</button>
+    <input id="username" placeholder="Username">
+    <input id="password" placeholder="Password" type="password">
+    <button onclick="register()">Register</button>
 
-<p>
-    Already have an account?
-    <a href="login.html">Login</a>
-</p>
+    <p>
+        Already have an account?
+        <a href="./login.html">Login</a>
+    </p>
+</div>
 
 <script>
     function register() {
@@ -26,10 +32,12 @@
                 password: document.getElementById("password").value
             })
         })
-        .then(res => res.json())
         .then(() => {
-            alert("Registration successful");
-            window.location.href = "login.html";
+            alert("Registration successful (demo)");
+            window.location.href = "./login.html";
+        })
+        .catch(() => {
+            alert("Backend not connected (frontend demo mode)");
         });
     }
 </script>

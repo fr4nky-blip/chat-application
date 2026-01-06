@@ -170,3 +170,89 @@ body {
 .chat-input button:hover {
     background: #5a67d8;
 }
+/* ===== NAVBAR ===== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: #111827;
+    color: white;
+}
+
+.nav-logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav-links a {
+    margin-left: 15px;
+    text-decoration: none;
+    color: white;
+}
+
+.btn-primary {
+    background: #2563eb;
+    padding: 8px 14px;
+    border-radius: 6px;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #1e40af;
+}
+
+.btn-secondary {
+    border: 1px solid #2563eb;
+    padding: 8px 14px;
+    border-radius: 6px;
+    color: #2563eb;
+}
+
+/* ===== HERO ===== */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(to right, #2563eb, #1e40af);
+    color: white;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.hero-buttons a {
+    margin: 0 10px;
+}
+
+/* ===== FEATURES ===== */
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 60px 20px;
+    background: #f4f6f8;
+}
+
+.feature-card {
+    background: white;
+    padding: 25px;
+    width: 250px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    text-align: center;
+    padding: 15px;
+    background: #111827;
+    color: #9ca3af;
+}

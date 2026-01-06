@@ -1,0 +1,172 @@
+/* === Global Styles === */
+body {
+    margin: 0;
+    font-family: 'Roboto', Arial, sans-serif;
+    background: #f0f2f5; /* default background */
+}
+
+/* === Login Page Styles === */
+.login-container {
+    background: #fff;
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.login-container h2 {
+    margin-bottom: 25px;
+    color: #333;
+    font-weight: 700;
+}
+
+.login-container input {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.login-container input:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 5px rgba(102, 126, 234, 0.5);
+    outline: none;
+}
+
+.login-container button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    background: #667eea;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.login-container button:hover {
+    background: #5a67d8;
+}
+
+.login-container p {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #555;
+}
+
+.login-container a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.login-container a:hover {
+    text-decoration: underline;
+}
+
+/* === Chat Page Styles === */
+.chat-container {
+    display: flex;
+    height: 100vh;
+}
+
+.user-list {
+    width: 30%;
+    background: #111b21;
+    color: white;
+}
+
+.user-list h3 {
+    padding: 15px;
+    margin: 0;
+    background: #202c33;
+}
+
+.user-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.user-list li {
+    padding: 15px;
+    cursor: pointer;
+    border-bottom: 1px solid #2a3942;
+}
+
+.user-list li:hover {
+    background: #2a3942;
+}
+
+.chat-area {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    background: #efeae2;
+}
+
+.chat-header {
+    padding: 15px;
+    background: #202c33;
+    color: white;
+}
+
+.messages {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+}
+
+.message {
+    margin-bottom: 10px;
+}
+
+.sent {
+    text-align: right;
+    color: green;
+}
+
+.received {
+    text-align: left;
+    color: blue;
+}
+
+.chat-input {
+    display: flex;
+    padding: 10px;
+    background: #202c33;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+.chat-input button {
+    padding: 10px 15px;
+    margin-left: 5px;
+    border: none;
+    border-radius: 5px;
+    background: #667eea;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.chat-input button:hover {
+    background: #5a67d8;
+}
